@@ -1,0 +1,11 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <view class="title">
+    推荐
+  </view>
+
+  <view class="main">
+    <articleList list='{{list}}'></articleList>
+  </view>
+
+</view>

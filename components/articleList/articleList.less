@@ -1,0 +1,100 @@
+/* components/articleList/articleList.wxss */
+.article--list-component-container {
+  .item {
+    background-color: #fff;
+    border-radius: 16rpx;
+    margin-bottom: 16rpx;
+    padding: 32rpx 16rpx;
+
+    .item-top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16rpx;
+
+      .item-top-avatar {
+        .item-top-avatar-image {
+          width: 80rpx;
+          height: 80rpx;
+          border-radius: 50%;
+          vertical-align: bottom;
+        }
+      }
+
+      .item-top-right {
+        padding-left: 16rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .item-top-name {
+          font-size: 28rpx;
+          color: var(--titleColor);
+        }
+
+        .item-top-right-bottom {
+          .item-top-right-bottom-date {
+            font-size: 24rpx;
+            color: var(--descColor);
+          }
+        }
+      }
+    }
+
+    .item-main {
+      .item-main-desc {
+        font-size: 28rpx;
+        color: var(--subTitleColor);
+        line-height: 42rpx;
+        text-align: justify;
+      }
+
+      .media-list {
+        padding: 16rpx 0;
+
+        .image-list,
+        .video-list {
+          display: flex;
+          justify-content: center;
+
+          .media-image-item,
+          .media-video-item {
+            height: 300rpx;
+            vertical-align: bottom;
+            border-radius: 16rpx;
+          }
+        }
+      }
+    }
+
+    .item-bottom {
+      display: flex;
+      height: 80rpx;
+      justify-content: space-between;
+
+      .common-item {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 16rpx 0;
+        border-right: 1rpx solid var(--borderColor);
+
+        .common-item-icon {
+          width: 40rpx;
+          height: 40rpx;
+          vertical-align: bottom;
+        }
+
+        .common-item-text {
+          font-size: 24rpx;
+          color: var(--descColor);
+          padding-left: 8rpx;
+        }
+      }
+
+      .common-item:last-child {
+        border-right: none;
+      }
+    }
+  }
+}

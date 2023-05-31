@@ -1,0 +1,10 @@
+<!--pages/message/message.wxml-->
+<view class="container">
+  <view class="title">
+    信息
+  </view>
+
+  <view class="main">
+    <articleList list='{{list}}'></articleList>
+  </view>
+</view>

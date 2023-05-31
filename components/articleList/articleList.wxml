@@ -1,0 +1,57 @@
+<!--components/articleList/articleList.wxml-->
+<view class="article--list-component-container">
+  <block wx:for="{{dataList}}" wx:key="index">
+    <view class="item">
+      <view class="item-top">
+        <view class="item-top-avatar">
+          <image src="{{item.avatar}}" mode="" class="item-top-avatar-image" />
+        </view>
+        <view class="item-top-right">
+          <view class="item-top-name">
+            {{item.name}}
+          </view>
+          <view class="item-top-right-bottom">
+            <view class="item-top-right-bottom-date">
+              {{item.date}}
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="item-main">
+        <view class="item-main-desc">
+          {{item.desc}}
+        </view>
+        <view class="media-list">
+          <view class="image-list" wx:if="{{item.image&&!item.video}}">
+            <image class="media-image-item" src="{{item.imageList[0]}}" mode="" />
+          </view>
+          <view class="video-list" wx:if="{{item.video}}">
+            <video class="media-video-item" src="{{item.videoList[0]}}" object-fit="fill" />
+          </view>
+        </view>
+
+      </view>
+      <view class="item-bottom">
+        <view class="item-bottom-like common-item">
+          <image wx:if='{{true}}' src="/assets/images/icon/like.png" mode="" class="common-item-icon" />
+          <image wx:else src="/assets/images/icon/like-active.png" mode="" class="common-item-icon" />
+          <text class="common-item-text">21</text>
+        </view>
+        <view class="item-bottom-collection common-item">
+          <image wx:if='{{true}}' src="/assets/images/icon/collection.png" mode="" class="common-item-icon" />
+          <image wx:else src="/assets/images/icon/collection-active.png" mode="" class="common-item-icon" />
+          <text class="common-item-text">12</text>
+        </view>
+        <view class="item-bottom-comment common-item">
+          <image wx:if='{{true}}' src="/assets/images/icon/comment.png" mode="" class="common-item-icon" />
+          <image wx:else src="/assets/images/icon/comment-active.png" mode="" class="common-item-icon" />
+          <text class="common-item-text">21</text>
+        </view>
+        <view class="item-bottom-share common-item">
+          <image src="/assets/images/icon/share.png" mode="" class="common-item-icon" />
+          <text class="common-item-text">分享</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
